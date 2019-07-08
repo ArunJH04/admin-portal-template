@@ -4,9 +4,10 @@ import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsComponent } from './projects.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { FormsModule } from '@angular/forms';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 @NgModule({
-  declarations: [ProjectsComponent],
+  declarations: [ProjectsComponent, AddProjectComponent],
   imports: [CommonModule, FormsModule, ProjectsRoutingModule, ButtonsModule.forRoot()]
 })
 export class ProjectsModule {}

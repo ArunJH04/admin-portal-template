@@ -41,36 +41,36 @@ export const navItems: NavData[] = [
   },
   {
     title: true,
-    name: 'Operations'
+    name: 'Projects'
   },
   {
     name: 'Projects',
-    url: '/components/projects',
-    icon: 'icon-puzzle'
+  url: '/components/projects',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'List Project',
+        url: '/components/projects',
+        icon: 'icon-pencil'
+      },
+      {
+        name: 'Add Project',
+        url: '/components/projects/add-project',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Search Project',
+        url: '/users',
+        icon: 'icon-pencil'
+      }
+    ]
   },
   {
     name: 'Users',
     url: '/components/users',
     icon: 'icon-pencil'
   },
-  // {
-  //   name: 'Components',
-  //   url: '/components',
-  //   icon: 'icon-puzzle',
-  //   children: [
-  //     ,
-  //     {
-  //       name: 'Projects',
-  //       url: '/projects',
-  //       icon: 'icon-puzzle'
-  //     },
-  //     {
-  //       name: 'Users',
-  //       url: '/users',
-  //       icon: 'icon-pencil'
-  //     }
-  //   ]
-  // },
+  
   // ,
   // {
   //   title: true,

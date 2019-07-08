@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProjectsComponent } from './projects/projects.component';
 import { UsersComponent } from './users/users.component';
-import { Z_FULL_FLUSH } from 'zlib';
+import { AddProjectComponent } from './projects/add-project/add-project.component';
 const routes: Routes = [
   {
     path: '',
@@ -21,7 +21,12 @@ const routes: Routes = [
         component: ProjectsComponent,
         data: {
           title: 'projects'
-        }
+        }, children: [
+          {
+            path: 'add-project',
+            component: AddProjectComponent
+          }
+        ]
       },
       {
         path: 'users',
