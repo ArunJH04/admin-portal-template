@@ -1,1 +1,101 @@
-<p>add-project works!</p>
+<div class="animated-fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Add Project</strong>
+                    <small>New Project</small>
+                    <span>
+                        <button aria-pressed="true" class="btn btn-danger active  float-right" type="button" [routerLink]="['/components/projects']">Back</button>
+                    </span>
+
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" id="title" placeholder="Enter project title">
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="lob">LOB</label>
+                                <input type="text" class="form-control" id="lob" placeholder="Enter line of business">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="bu">BU</label>
+                                <input type="text" class="form-control" id="street" placeholder="Enter business name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="type">Type</label>
+                                <input type="text" class="form-control" id="type" placeholder="Enter project type">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="start_date">Start Date</label>
+                                <input type="date" class="form-control" id="start_date">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="end_date">End Date</label>
+                                <input type="date" class="form-control" id="end_date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="budget">Budget</label>
+                                <div class="input-prepend input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+                                    </div>
+                                    <input class="form-control" id="appendedPrependedInput" size="16" type="text" placeholder="Enter budget">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="Enter Location">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="vendor">Vendors</label>
+                                <select class="form-control" id="select1" name="select1">
+                                    <option value="0">Please select</option>
+                                    <option value="1">Option #1</option>
+                                    <option value="2">Option #2</option>
+                                    <option value="3">Option #3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                    </div>
+                    <div class="row text-right">
+                        <div class="col-md-8"></div>
+                        <div class="col-md-1 col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                                <button aria-pressed="true" class="btn btn-danger active" type="reset">Reset</button>
+                        </div>
+                        <div class="col-md-1">
+                            <button aria-pressed="true" class="btn btn btn-danger active" type="button" style=" background-color: #c80651">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.col-->
+    </div>
+</div>

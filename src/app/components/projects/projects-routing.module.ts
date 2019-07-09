@@ -9,12 +9,7 @@ const routes: Routes = [
     component: ProjectsComponent,
     data: {
       title: 'Projects'
-    }, children: [
-      {
-        path: 'add-project',
-        component: AddProjectComponent
-      }
-    ]
+    }
   },
 ];
   

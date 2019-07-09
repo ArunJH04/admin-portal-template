@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-add-project',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProjectComponent implements OnInit {
 
-  constructor() { }
+  constructor( private Router:Router) { }
 
   ngOnInit() {
     console.log("add loaded");

@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit {
 
   navAddProject() {
     console.log("add pro");
-    this.Router.navigate(['components/projects/add-project']);
+    this.Router.navigate(['components/add-project']);
   }
 
 }

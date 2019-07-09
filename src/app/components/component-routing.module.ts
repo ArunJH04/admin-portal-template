@@ -21,12 +21,11 @@ const routes: Routes = [
         component: ProjectsComponent,
         data: {
           title: 'projects'
-        }, children: [
-          {
-            path: 'add-project',
-            component: AddProjectComponent
-          }
-        ]
+        }
+      },
+      {
+        path: 'add-project',
+        component: AddProjectComponent
       },
       {
         path: 'users',

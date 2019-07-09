@@ -45,23 +45,81 @@ export const navItems: NavData[] = [
   },
   {
     name: 'Projects',
-  url: '/components/projects',
+    url: '/components/projects',
     icon: 'icon-puzzle',
     children: [
       {
         name: 'List Project',
         url: '/components/projects',
-        icon: 'icon-pencil'
+        icon: 'icon-list'
       },
       {
         name: 'Add Project',
-        url: '/components/projects/add-project',
+        url: '/components/add-project',
         icon: 'icon-puzzle'
+      }
+    ]
+  },
+  {
+    name: 'Talent',
+    url: '/components/talents',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'List Talents',
+        url: '/components/talents',
+        icon: 'icon-list'
       },
       {
-        name: 'Search Project',
-        url: '/users',
-        icon: 'icon-pencil'
+        name: 'Add Talent',
+        url: '/components/add-talent',
+        icon: 'icon-puzzle'
+      }
+    ]
+  },
+  {
+    name: 'Reports',
+    url: '/components/reports',
+    icon: 'icon-puzzle',
+  },
+  {
+    name: 'Master Data',
+    url: '/components/master-data',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'Vendor',
+        url: '/components/vendors',
+        icon: 'icon-list',
+        children: [
+          {
+            name: 'Add Vendor',
+            url: '/components/add-vendor',
+            icon: 'icon-list'
+          },
+          {
+            name: 'List Vendor',
+            url: '/components/vendors',
+            icon: 'icon-puzzle'
+          }
+        ]
+      },
+      {
+        name: 'Employee',
+        url: '/components/employees',
+        icon: 'icon-puzzle',
+        children: [
+          {
+            name: 'Add Employee',
+            url: '/components/add-employee',
+            icon: 'icon-list'
+          },
+          {
+            name: 'List Employee',
+            url: '/components/employees',
+            icon: 'icon-puzzle'
+          }
+        ]
       }
     ]
   },
@@ -71,7 +129,7 @@ export const navItems: NavData[] = [
     icon: 'icon-pencil'
   },
   
-  // ,
+  // , 
   // {
   //   title: true,
   //   name: 'Components'
