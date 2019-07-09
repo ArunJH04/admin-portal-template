@@ -8,6 +8,12 @@ import { AddProjectComponent } from './add-project/add-project.component';
 
 @NgModule({
   declarations: [ProjectsComponent, AddProjectComponent],
-  imports: [CommonModule, FormsModule, ProjectsRoutingModule, ButtonsModule.forRoot()]
+  imports: [
+    CommonModule,
+    FormsModule,
+    AddProjectComponent,
+    ProjectsRoutingModule,
+    ButtonsModule.forRoot()
+  ]
 })
 export class ProjectsModule {}
