@@ -3,10 +3,11 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <strong>Add Project</strong>
+                    <span class="icon-pencil"></span> <strong>Add Project</strong>
                     <small>New Project</small>
                     <span>
-                        <button aria-pressed="true" class="btn btn-danger active  float-right" type="button" [routerLink]="['/components/projects']">Back</button>
+                        <button class="btn btn-sm btn-danger float-right" type="button" [routerLink]="['/components/projects']"><i class="icon-arrow-left-circle"></i> Back 
+                        </button>
                     </span>
 
                 </div>
@@ -36,7 +37,12 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="type">Type</label>
-                                <input type="text" class="form-control" id="type" placeholder="Enter project type">
+                                <select class="form-control" id="type" name="type">
+                                    <option value="0">Select Type</option>
+                                    <option value="1">Type 1</option>
+                                    <option value="2">Type 2</option>
+                                    <option value="3">Type 3</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -73,11 +79,11 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="vendor">Vendors</label>
-                                <select class="form-control" id="select1" name="select1">
-                                    <option value="0">Please select</option>
-                                    <option value="1">Option #1</option>
-                                    <option value="2">Option #2</option>
-                                    <option value="3">Option #3</option>
+                                <select class="form-control" id="vendor" name="vendor" multiple>
+                                    <option value="0">Select Vendor</option>
+                                    <option value="1">Vendot 1</option>
+                                    <option value="2">Vendot 2</option>
+                                    <option value="3">Vendot 3</option>
                                 </select>
                             </div>
                         </div>
@@ -86,12 +92,13 @@
                         
                     </div>
                     <div class="row text-right">
-                        <div class="col-md-8"></div>
-                        <div class="col-md-1 col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
-                                <button aria-pressed="true" class="btn btn-danger active" type="reset">Reset</button>
-                        </div>
-                        <div class="col-md-1">
-                            <button aria-pressed="true" class="btn btn btn-danger active" type="button" style=" background-color: #c80651">Add</button>
+                        <div class="col-md-10"></div>
+                        <div class="col-sm-4 col-md-1 col-xl mb-3 mb-xl-0">
+                            <button class="btn btn-sm btn-primary" type="submit">
+                                    <i class="fa fa-dot-circle-o"></i> Submit
+                            </button>
+                            <button class="btn btn-sm btn-danger" type="reset"><i class="fa fa-ban"></i> Reset 
+                            </button>
                         </div>
                     </div>
                 </div>
