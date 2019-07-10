@@ -9,14 +9,24 @@ import { ComponentService } from '../../component.service';
 })
 export class AddProjectComponent implements OnInit {
   projectInfo = {};
+  vendorList = [];
+
   constructor(
     private Router: Router,
     private componentService: ComponentService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getVendorsList();
+  }
 
+  getVendorsList() {
+    this.componentService.getAllVendors().subscribe((data: any) => {
+      this.vendorList = data;
+    });
+  }
   addProjectDetails() {
+    console.log(this.projectInfo);
     this.componentService
       .addProject(this.projectInfo)
       .subscribe((data: any) => {

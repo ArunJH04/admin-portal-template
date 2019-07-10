@@ -2,18 +2,29 @@ import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 
 export class ComponentService {
-  baseUrl = environment.api.base;
-  endPointUrl = environment.api.endPoints;
+  // Base URL
+  baseProject = environment.api.baseProject; // "Project"
+  baseVendor = environment.api.baseVendor; // "Vendor"
+
+  endPointUrl = environment.api.endPoints; // Common End Point URL
+
   constructor(private httpClient: HttpClient) {}
 
-  getProjects() {
-    return this.httpClient.get(this.baseUrl + this.endPointUrl.getProjects);
+  getAllProjects() {
+    return this.httpClient.get(
+      this.baseProject + this.endPointUrl.getAllProjects
+    );
   }
-
   addProject(projectInfo) {
     return this.httpClient.post(
-      this.baseUrl + this.endPointUrl.getProjects,
+      this.baseProject + this.endPointUrl.getAllProjects,
       projectInfo
+    );
+  }
+
+  getAllVendors() {
+    return this.httpClient.get(
+      this.baseVendor + this.endPointUrl.getAllVendors
     );
   }
 }

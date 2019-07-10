@@ -9,6 +9,7 @@ import { ComponentService } from '../component.service';
 })
 export class ProjectsComponent implements OnInit {
   projectList = [];
+  vendorList = [];
   projectInfo = {};
   constructor(
     private Router: Router,
@@ -17,11 +18,20 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.getProjectsList();
+    this.getProjectTypesList();
+    this.getProjectTypesStatus();
+    this.getVendorsList();
   }
 
   getProjectsList() {
-    this.componentService.getProjects().subscribe((data: any) => {
+    this.componentService.getAllProjects().subscribe((data: any) => {
       this.projectList = data;
+    });
+  }
+
+  getVendorsList() {
+    this.componentService.getAllVendors().subscribe((data: any) => {
+      this.vendorList = data;
     });
   }
   navAddProject() {

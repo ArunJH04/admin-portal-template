@@ -137,14 +137,28 @@
                   multiple
                 >
                   <option value="0">Select Vendor</option>
-                  <option value="1">Vendot 1</option>
-                  <option value="2">Vendot 2</option>
-                  <option value="3">Vendot 3</option>
+                  <option
+                    value="{{ eachVal.vendorId }}"
+                    *ngFor="let eachVal of vendorList"
+                    >{{ eachVal.name }}</option
+                  >
                 </select>
               </div>
             </div>
           </div>
-          <div class="row"></div>
+          <div class="row col-md-12">
+            <label for="project_desc">Description</label>
+            <textarea
+              class="form-control"
+              id="project_desc"
+              name="project_desc"
+              placeholder="Content.."
+              rows="6"
+              spellcheck="false"
+              [(ngModel)]="projectInfo.project_desc"
+            ></textarea>
+          </div>
+          <br />
           <div class="row text-right">
             <div class="col-md-10"></div>
             <div class="col-sm-4 col-md-1 col-xl mb-3 mb-xl-0">

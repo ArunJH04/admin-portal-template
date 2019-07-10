@@ -13,14 +13,76 @@
               <i class="icon-plus"></i> Add Project
             </button>
           </div>
+          <br />
+          <hr />
+          <div class="row">
+            <!-- <div class="col-lg-1">
+              <h5 class=".h5">Search:</h5>
+            </div> -->
+            <div class="col-lg-2">
+              <select class="form-control" name="search_title">
+                <option value="0">Select Title</option>
+                <option
+                  value="{{ indvalue.projectId }}"
+                  *ngFor="let indvalue of projectList"
+                  >{{ indvalue.title }}</option
+                >
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <select class="form-control" name="search_vendor">
+                <option value="0">Select Vendor</option>
+                <option
+                  value="{{ eachVal.vendorId }}"
+                  *ngFor="let eachVal of vendorList"
+                  >{{ eachVal.name }}</option
+                >
+              </select>
+            </div>
+
+            <div class="col-mlg-2">
+              <select class="form-control" name="search_type">
+                <option value="0">Select Type</option>
+                <option
+                  value="{{ eachVal.vendorId }}"
+                  *ngFor="let eachVal of vendorList"
+                  >{{ eachVal.name }}</option
+                >
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <select class="form-control" name="search_status">
+                <option value="0">Select Status</option>
+                <option
+                  value="{{ eachVal.vendorId }}"
+                  *ngFor="let eachVal of vendorList"
+                  >{{ eachVal.name }}</option
+                >
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <input
+                type="date"
+                class="form-control"
+                name="search_start_date"
+              />
+            </div>
+            <div class="col-lg-2">
+              <button class="btn btn-sml btn-success" type="button">
+                <i class="fa fa-search"></i> Search
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="card-body">
+        <div class="card-body table-responsive">
           <table class="table">
             <thead>
               <tr>
+                <th>#</th>
                 <th>Project Name</th>
-                <th>Company</th>
+                <th>Vendor</th>
                 <th>LOB</th>
+                <th>Type</th>
                 <th>Rate</th>
                 <th>Start Date</th>
                 <th>End Date</th>
@@ -28,16 +90,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let indvalue of projectList">
+              <tr *ngFor="let indvalue of projectList; let i = index">
+                <td>{{ i + 1 }}</td>
                 <td>{{ indvalue.title }}</td>
-                <td>{{ indvalue.vendor }}</td>
-                <td>{{ indvalue.lob }}</td>
+                <td>{{ indvalue.vendors }}</td>
+                <td>{{ indvalue.lineOfBusiness }}</td>
+                <td>{{ indvalue.projectType }}</td>
                 <td>{{ indvalue.budget }}</td>
                 <td>{{ indvalue.startDate }}</td>
                 <td>{{ indvalue.endDate }}</td>
-                <td>
-                  <span class="badge badge-success">Active</span>
-                </td>
+                <td>{{ indvalue.projectStatus }}</td>
               </tr>
             </tbody>
           </table>
