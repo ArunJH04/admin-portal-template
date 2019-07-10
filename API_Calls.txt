@@ -1,0 +1,18 @@
+TEMPLATE URL :- https://coreui.io/angular/demo/#/forms/basic-forms
+
+
+API CALLS:-
+http://106.51.32.211:9090/vendor/findAllVendors
+
+http://106.51.32.211:9090/project/findAllProjects
+
+http://106.51.32.211:9090/candidate/findAllCandidates
+
+http://106.51.32.211:9090/project/createProject
+
+http://106.51.32.211:9090/project/projectStatus
+
+http://106.51.32.211:9090/project/projectTypes
+
+
+http://106.51.32.211:9090/user/findAllUsers

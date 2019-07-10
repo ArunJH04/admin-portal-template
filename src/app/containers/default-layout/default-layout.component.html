@@ -1,7 +1,22 @@
-<app-header [navbarBrandRouterLink]="['/dashboard']" [fixed]="true"
-  [navbarBrandFull]="{src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXkAAACGCAMAAAAPbgp3AAAAkFBMVEX///8LDQkAAABXVlbLy8tUU1Nqa2lPTk7r6+tiYWEAAwA3ODZNTEzz8/PQ0ND6+vrf399GRUW4uLi/v7/k5eQuMC2AgID19fVaWVmrrKvDw8Pc3Nxvbm6kpaR6e3kABwCbm5uQkI9lZmRBQkCIiIg6OzkmJyUgIh+dnpwdHhsWGBWTlJOzsrJ9fHwXGRYPEQ3/LbA6AAAKkElEQVR4nO2c63qqOhCGbTACylFRUUHUWtsu2+X9390mJIEEgrUWjXt13h99LEQOH5OZySTY6wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAjjWeUMae7kv5ZfQRx9Z9Kb+MPnqioIHuS/llgPK6AOV1AcrrApTXBSivC1BeF6C8LkB5XYDyugDldQHK6wKU1wUorwtQXhegvC5AeV2A8rq4SnmfclmzLo/4L/Ft5a3x/uWpmLg9OdtJu1Zear8WzUazsc++Sfiw6i1XH4MpnQp+jdP+dbfRGVaU4yp3zcmuqLMzfVN5b/A3VygrvpERrWYrVTN/aWa8GWm1IfeypPLKX5iPw1O+kV7DMP/08tZ4NPek78Qx3ip3pTiOzY/uzvQd5aMBl5MzRKdt0+6jHdeSHRs9B/xUsvJLs35EhKbjzu7uCvamgU1VzwtCbOBk3tmJvqN8Kuv5xCx/Wr/ORdZoh9Ayt/mifVA1nK9VR0TIVnf3uxDFucCKFTD+DBuGo+zh13G58v6eW2dG3caQf3MoG2la7SkovoXePaZ85Skth598KLQkjUfdudNvkzq5wk2nsjQNw1S7oeu4WHl/jUo5je24nyaHyj1PhIaLKgyM1pvNJv5TtEOjuvLWtDzi393bcnm0T/yIaKrP2fvr3Lhx/dG7pCsYXfbFi5Xfl6Kk3LF7OybyMKuWBk7KwDrjVz8JyTY0zSTl58ziM2Qu+ZcXo/Is+jJML8yte1/bmBKT7zQAXar8B5fkU7TGj2zIhOKRZ/5EG6IXwSX6GyI9Ff7ElU+48KlwQHfGz7Pu4OauJA+yBpaDl0U2fXZqDRcqPx8yiWu2MOYWfmQbmHIolDtmWp5mxJ7ckgu/lI9YSq9vha1lE88ibZoRkw9a2l/HhcozJ9+0xLIv0MtaIVnfktJZsT3+gbVctJ0q7C6B+y4fJMiKF1aE17duT3KZ8gF1FU1BK6E+i/+YC2ka7PxZfiaLtkfZc1ngrXeGO1IEWaMKsn7RCTq2hMuU37cZaN412a4pudDoUDgl1YrwD0n5OWb/KtJH/lDwdXfUBQEJsrPy3zdi8pXj972P2c62Pzd90RCjIApkFxtEUVCEhojvsfqbxGb3dZHyPhV0+K7ayZ8KCfxMtEzho5kpM+U9pAwbFG70GssIGzHIBlhMdubLBDuYYJr2sbxGdx3bhtRNXdO2ceGEB3ZMbNZNbdPE+Jnuvkh5Fg2lLKTEYzGW2DlNFJGjajcTleePSzkm3LT3sHvh2sJIluQ6IQ+v1qdDXFEuPPlr2nwo4yYYOxPpGCH/mo3Nmd8LkuKbRkh3X6Q8k+KkTjeoiWYo/8gkUw713kTlWQeYKg/Iw/RMufc+LEmQpZY2yT+WlbKAqIdNZ5cQy88/hhu6I1feMFuVx7HvPZPmeUcZ0d0XKW+gc46XJ5JBKZky/RoLylssYiudTd5NadNQY73eJ4Yekyg0J+Y/YOE1sonnsVPLnc+t3O3kJswM/bzyhtMnh8G79XHBPMdFyv/JWvKQggnTe8KiaPaurLpMBOX759MXmiFlfzQWznoRH8kuxPC6Jv+s+f35m7wRjgt1v1DeiDEOPz0hdF2kPNPpqN67Kt0ycyimUjFReZ7otIyWjmy3TuWLekEeZAPia/idj8m2pNbILBLqr5Q3zEQOapcoH5230IB1iZTFTRQrvYSoPB3SZtOWUeHiEZSf51LiXeF1MDfVIu5KAhKHg8mWr5TH+5oqlyjvle5EiUXLXHmX2KIzXqmp/PDQonz/fJe4E33ibz6JtfIkq6ilbeRGJtv0hfJ4XTfHDpXfcuXVcfMbynsPoXxvS8xddC8ky3fkUQYZ7mLb/zrCNuqcHSgfTYeyt7Ev9DbDacsEyPIRvA0tUJKknRvA/JPMB9ZujjyN0NKjfMCGUpWfV1Y4FH6+zebTx1C+t3AMIbwWNcyas2GJf/9GyvvnBkhVbjNmIy5VXa0nK3+mykDYPojyPomfZmlHERZ8PmeV60tkvanyiXo3z0RW5SelKYtjWD4EOJvPV9Mt2phJs+FFHa3e8Ym+Znoj5XvPrByjHlMOmIyi9Ss4CsqvmINS1wcsdj796w0vUH5+U+VpfSBT121YIbOowTDlVT8b4u9EV/ROhwAH5el4XOl4KuIKtCs/PjeI5Z5jk3/GbNivKEFazMyp8ryfKBfzrc/tvCuy8pEhlM44wS39fM+iJpplqp02OwLpELwqoMjo36SZEZ43qgZd1qk4m3o24L7Iyitzmz7JbbxbKd/btRfouWswi2vjkxqNRN06DEXl2ehLWaDnmU2Xy4quRFa+PZ93f6S8XSyjrRBTQyZvdmpkLRafX6Un5bUup54QGuw8POXk8hqNqM3ONTxoXGfGkZWnY1j5sorqzsCnj0VOOUm+GRZ3e175pz9TiVfJY3C/3CiGlSsF2Ertd2baOykj9LflA2bKW3ylTt2yy0eprkHcl5rybXWbwhXs87bSNX+QXcWnL5R/GkrIGd+Km6y8DKW5OoYvrEHPgh+xSCyQImzp9+sZjBsy4TUuMquoKU8L7ZKDHJDCTuEJSMHYEB0F8U1r/rWzysvUcu0NFwoLJ452fGv1sGO+6WmwKlzOfHUk687Y4r5qgFs2XAueqc8CRfYAiU2vqXxRnx8INkH8D5scD2odYlmNeH+kfJnCoPcZ0859O/BtghOyXtjGDKEwme3X+FSsqhxJ87DkSssFraMF+3q0PvFtLbMwd6auvJ8QpRMe7eiclM3uaGaK0pOcB8d018+Un4eVos+zxWLrlOu4Ze9fSv8krOJGiC3iFoo6XrlyGCG8XSzWo+ptlE3vIagrT+dhcXwMLNcKxsU/5UzhipSUzc9+5LrW6oiFwv7PlO/N45qiT/xJDGSXbOHaayD5F149qWJG8UbqIyL18hINNJTvrYrVHqZjJwO69kBYYEwWBRrYiZPEdojTd/jrND9Unry6oGiMmvY5P8qv4OQmHfQUyveCWHHEDE31reurMTNx/f0Reb2NY4sVlaVjVvtMZ8O32xj/SPncSJ3aW025nSaqtDuanehrJcVfOsBgymMp3Vwcatoj5YtXutjbO7teofWFNWbJQr7WaJtbe7HLMfbVM0nywzQmN6pfx62jqiP6y93fXE9aS8jbTNdtK5vd5ToOR4cQJ5uIXt1YOWHlpk7GAwZ5TuFRWdzXhEVobPVX432SJPt01ZxAiJabzyRZbyaiMPlBokbF2/XaaNF0NSav6RCnHO7754eZbhS4lc4002drjsX78BaYvjn7ilNPe0n+wfGveCN3z+fJlbgtr/8CP4alRupZE+CGWDQ6qBbMAzeFLTdQlviBG8Le1tH5yt8vhS+heZhB0m+Br0p41n0h/zKpwqy9d6Z8dz9SAtTxn9G6vjrkjRV/EX6cwsC/h4cyhP4cy+Gtv1oc+M8jQEp5S4rJq1z8qblLtsdk5/xFZWEffM0teWU6D3nlrfzRGp1vWf4CIlUNv3gQow5/Dwlo4i9eFNojdNhCRezW+GND+LEt+stbL+kjVd3/ZZbbxJlmhNPImOn9HcRfh2tFQU5kwVwHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPxP+A9SWqaInANergAAAABJRU5ErkJggg==', width: 89, height: 25, alt: 'Logo'}"
-  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'Logo'}">
-  <ul class="nav navbar-nav d-md-down-none">
+<app-header
+  [navbarBrandRouterLink]="['/dashboard']"
+  [fixed]="true"
+  [navbarBrandFull]="{
+    src: 'assets/img/logo/logo.png',
+    width: 141,
+    height: 57,
+    alt: 'Logo'
+  }"
+  [navbarBrandMinimized]="{
+    src: 'assets/img/logo/logo-sm.png',
+    width: 64,
+    height: 61,
+    alt: 'Logo'
+  }"
+  [sidebarToggler]="'lg'"
+  [asideMenuToggler]="'lg'"
+>
+  <!-- <ul class="nav navbar-nav d-md-down-none">
     <li class="nav-item px-3">
       <a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a>
     </li>
@@ -11,10 +26,13 @@
     <li class="nav-item px-3">
       <a class="nav-link" [routerLink]="['/components/users']">Users</a>
     </li>
-    <!-- <li class="nav-item px-3">
-      <a class="nav-link" href="#">Settings</a>
-    </li> -->
-  </ul>
+
+  </ul> -->
+
+  <div class="title h1">
+    <span>Vendor Management System</span>
+  </div>
+
   <ul class="nav navbar-nav ml-auto">
     <!-- <li class="nav-item d-md-down-none">
       <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
@@ -26,12 +44,28 @@
       <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
     </li> -->
     <li class="nav-item dropdown" dropdown placement="bottom right">
-      <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
-        dropdownToggle (click)="false">
-        <img src="https://karhoocourier.my/wp-content/uploads/2017/07/user.png" class="img-avatar"
-          alt="admin@bootstrapmaster.com" />
+      <a
+        class="nav-link"
+        data-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+        dropdownToggle
+        (click)="(false)"
+      >
+        Welcome, <span class="logged-user-name">Admin</span
+        ><img
+          src="https://karhoocourier.my/wp-content/uploads/2017/07/user.png"
+          class="img-avatar"
+          alt="admin@bootstrapmaster.com"
+        />
       </a>
-      <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+      <div
+        class="dropdown-menu dropdown-menu-right"
+        *dropdownMenu
+        aria-labelledby="simple-dropdown"
+      >
         <!-- <div class="dropdown-header text-center"><strong>Account</strong></div>
         <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="badge badge-info">42</span></a>
         <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="badge badge-success">42</span></a>
@@ -51,7 +85,11 @@
 </app-header>
 <div class="app-body">
   <app-sidebar [fixed]="true" [display]="'lg'">
-    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+    <app-sidebar-nav
+      [navItems]="navItems"
+      [perfectScrollbar]
+      [disabled]="sidebarMinimized"
+    ></app-sidebar-nav>
     <app-sidebar-minimizer></app-sidebar-minimizer>
   </app-sidebar>
   <!-- Main content -->
@@ -82,7 +120,8 @@
     <!--</ol>-->
     <div class="container-fluid">
       <router-outlet></router-outlet>
-    </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.container-fluid -->
   </main>
   <!-- <app-aside [fixed]="true" [display]="false">
     <tabset>

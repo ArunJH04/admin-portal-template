@@ -40,38 +40,156 @@ export const navItems: NavData[] = [
     // }
   },
   {
-    title: true,
-    name: 'Operations'
-  },
-  {
     name: 'Projects',
     url: '/components/projects',
-    icon: 'icon-puzzle'
+    icon: 'icon-paper-clip',
+    children: [
+      {
+        name: 'Add Project',
+        url: '/components/add-project',
+        icon: 'icon-pencil',
+      },
+      {
+        name: 'List Project',
+        url: '/components/projects',
+        icon: 'icon-list'
+      }
+    ]
   },
   {
-    name: 'Users',
-    url: '/components/users',
-    icon: 'icon-pencil'
+    name: 'Talent',
+    url: '/components/talents',
+    icon: 'icon-bulb',
+    children: [
+      {
+        name: 'Add Talent',
+        url: '/components/add-talent',
+        icon: 'icon-pencil',
+        children: [
+          {
+            name: 'Add Temp Staff',
+            url: '/components/add-temp-staff',
+            icon: 'icon-user-follow'
+          },
+          {
+            name: 'Add Perm Hiring',
+            url: '/components/add-perm-hire',
+            icon: 'icon-user-follow'
+          }
+        ]
+      },
+      {
+        name: 'List Talents',
+        url: '/components/talents',
+        icon: 'icon-list'
+      }
+    ]
+  },
+  {
+    name: 'Reports',
+    url: '/components/reports',
+    icon: 'icon-docs',
+  },
+  {
+    name: 'Master Data',
+    url: '/components/master-data',
+    icon: 'icon-briefcase',
+    children: [
+      {
+        name: 'Vendors',
+        url: '/components/vendors',
+        icon: 'icon-people',
+        children: [
+          {
+            name: 'Add Vendor',
+            url: '/components/add-vendor',
+            icon: 'icon-pencil'
+          },
+          {
+            name: 'List Vendor',
+            url: '/components/vendors',
+            icon: 'icon-list'
+          }
+        ]
+      },
+      {
+        name: 'Business Unit',
+        url: '/components/business',
+        icon: 'icon-chart',
+        children: [
+          {
+            name: 'Add Business',
+            url: '/components/add-business',
+            icon: 'icon-pencil'
+          },
+          {
+            name: 'List Business',
+            url: '/components/business',
+            icon: 'icon-list'
+          }
+        ]
+      },
+      {
+        name: 'Departments',
+        url: '/components/departments',
+        icon: 'icon-wallet',
+        children: [
+          {
+            name: 'Add Department',
+            url: '/components/add-department',
+            icon: 'icon-pencil'
+          },
+          {
+            name: 'List Department',
+            url: '/components/departments',
+            icon: 'icon-list'
+          }
+        ]
+      },
+      {
+        name: 'LOB',
+        url: '/components/lob',
+        icon: 'icon-rocket',
+        children: [
+          {
+            name: 'Add LOB',
+            url: '/components/add-lob',
+            icon: 'icon-pencil'
+          },
+          
+          {
+            name: 'List LOB',
+            url: '/components/lobs',
+            icon: 'icon-list'
+          }
+        ]
+      },
+      {
+        name: 'Locations',
+        url: '/components/locations',
+        icon: 'icon-location-pin',
+        children: [
+          {
+            name: 'Add Location',
+            url: '/components/add-location',
+            icon: 'icon-pencil'
+          },
+          {
+            name: 'List Location',
+            url: '/components/locations',
+            icon: 'icon-list'
+          }
+        ]
+      }
+    ]
   },
   // {
-  //   name: 'Components',
-  //   url: '/components',
-  //   icon: 'icon-puzzle',
-  //   children: [
-  //     ,
-  //     {
-  //       name: 'Projects',
-  //       url: '/projects',
-  //       icon: 'icon-puzzle'
-  //     },
-  //     {
-  //       name: 'Users',
-  //       url: '/users',
-  //       icon: 'icon-pencil'
-  //     }
-  //   ]
+  //   name: 'Users',
+  //   url: '/components/users',
+  //   icon: 'icon-pencil'
   // },
-  // ,
+  
+  // , 
   // {
   //   title: true,
   //   name: 'Components'

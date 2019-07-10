@@ -1,0 +1,23 @@
+app-header {
+  background-color: #2f353a;
+  height: 67px;
+}
+app-sidebar-nav {
+  margin-top: 14px;
+}
+main {
+  margin-top: 12px;
+}
+.title {
+  color: white;
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-left: 25%;
+  font-family: initial;
+}
+app-sidebar-nav-dropdown a {
+  padding-left: 44px !important;
+}
+.nav-link .logged-user-name {
+  color: #61c8f1;
+}

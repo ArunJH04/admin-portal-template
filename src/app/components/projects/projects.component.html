@@ -1,64 +1,105 @@
 <div class="animated fadeIn">
-
   <div class="row">
     <div class="col-lg-12">
       <div class="card">
         <div class="card-header">
-          <i class="fa fa-align-justify"></i> All Projects
+          <i class="icon-paper-clip"></i> All Projects
           <div class="col-2 pull-right">
-            <button type="button" class="btn btn-block btn-primary">Add Project</button>
+            <button
+              class="btn btn-sm btn-primary float-right"
+              type="button"
+              (click)="navAddProject()"
+            >
+              <i class="icon-plus"></i> Add Project
+            </button>
+          </div>
+          <br />
+          <hr />
+          <div class="row">
+            <!-- <div class="col-lg-1">
+              <h5 class=".h5">Search:</h5>
+            </div> -->
+            <div class="col-lg-2">
+              <select class="form-control" name="search_title">
+                <option value="0">Select Title</option>
+                <option
+                  value="{{ indvalue.projectId }}"
+                  *ngFor="let indvalue of projectList"
+                  >{{ indvalue.title }}</option
+                >
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <select class="form-control" name="search_vendor">
+                <option value="0">Select Vendor</option>
+                <option
+                  value="{{ eachVal.vendorId }}"
+                  *ngFor="let eachVal of vendorList"
+                  >{{ eachVal.name }}</option
+                >
+              </select>
+            </div>
+
+            <div class="col-mlg-2">
+              <select class="form-control" name="search_type">
+                <option value="0">Select Type</option>
+                <option
+                  value="{{ eachVal.vendorId }}"
+                  *ngFor="let eachVal of vendorList"
+                  >{{ eachVal.name }}</option
+                >
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <select class="form-control" name="search_status">
+                <option value="0">Select Status</option>
+                <option
+                  value="{{ eachVal.vendorId }}"
+                  *ngFor="let eachVal of vendorList"
+                  >{{ eachVal.name }}</option
+                >
+              </select>
+            </div>
+            <div class="col-lg-2">
+              <input
+                type="date"
+                class="form-control"
+                name="search_start_date"
+              />
+            </div>
+            <div class="col-lg-2">
+              <button class="btn btn-sml btn-success" type="button">
+                <i class="fa fa-search"></i> Search
+              </button>
+            </div>
           </div>
         </div>
-        <div class="card-body">
+        <div class="card-body table-responsive">
           <table class="table">
             <thead>
               <tr>
+                <th>#</th>
                 <th>Project Name</th>
-                <th>Date registered</th>
-                <th>Role</th>
+                <th>Vendor</th>
+                <th>LOB</th>
+                <th>Type</th>
+                <th>Rate</th>
+                <th>Start Date</th>
+                <th>End Date</th>
                 <th>Status</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Samppa Nori</td>
-                <td>2012/01/01</td>
-                <td>Member</td>
-                <td>
-                  <span class="badge badge-success">Active</span>
-                </td>
-              </tr>
-              <tr>
-                <td>Estavan Lykos</td>
-                <td>2012/02/01</td>
-                <td>Staff</td>
-                <td>
-                  <span class="badge badge-danger">Banned</span>
-                </td>
-              </tr>
-              <tr>
-                <td>Chetan Mohamed</td>
-                <td>2012/02/01</td>
-                <td>Admin</td>
-                <td>
-                  <span class="badge badge-secondary">Inactive</span>
-                </td>
-              </tr>
-              <tr>
-                <td>Derick Maximinus</td>
-                <td>2012/03/01</td>
-                <td>Member</td>
-                <td>
-                  <span class="badge badge-warning">Pending</span>
-                </td>
-              </tr>
-              <tr>
-                <td>Friderik Dávid</td>
-                <td>2012/01/21</td>
-                <td>Staff</td>
-                <td>
-                  <span class="badge badge-success">Active</span>
-                </td>
+              <tr *ngFor="let indvalue of projectList; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ indvalue.title }}</td>
+                <td>{{ indvalue.vendors }}</td>
+                <td>{{ indvalue.lineOfBusiness }}</td>
+                <td>{{ indvalue.projectType }}</td>
+                <td>{{ indvalue.budget }}</td>
+                <td>{{ indvalue.startDate }}</td>
+                <td>{{ indvalue.endDate }}</td>
+                <td>{{ indvalue.projectStatus }}</td>
               </tr>
             </tbody>
           </table>
