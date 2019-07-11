@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+import { VendorService } from '../../components/vendors/vendor.service';
 
 @Component({
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
+  constructor(private vendorService: VendorService) {}
+  vendorList = [];
+  candidateList = [];
 
   radioModel: string = 'Month';
 
@@ -16,7 +20,15 @@ export class DashboardComponent implements OnInit {
       label: 'Series A'
     }
   ];
-  public lineChart1Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChart1Labels: Array<any> = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July'
+  ];
   public lineChart1Options: any = {
     tooltips: {
       enabled: false,
@@ -24,25 +36,28 @@ export class DashboardComponent implements OnInit {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [{
-        gridLines: {
-          color: 'transparent',
-          zeroLineColor: 'transparent'
-        },
-        ticks: {
-          fontSize: 2,
-          fontColor: 'transparent',
+      xAxes: [
+        {
+          gridLines: {
+            color: 'transparent',
+            zeroLineColor: 'transparent'
+          },
+          ticks: {
+            fontSize: 2,
+            fontColor: 'transparent'
+          }
         }
-
-      }],
-      yAxes: [{
-        display: false,
-        ticks: {
+      ],
+      yAxes: [
+        {
           display: false,
-          min: 40 - 5,
-          max: 84 + 5,
+          ticks: {
+            display: false,
+            min: 40 - 5,
+            max: 84 + 5
+          }
         }
-      }],
+      ]
     },
     elements: {
       line: {
@@ -51,8 +66,8 @@ export class DashboardComponent implements OnInit {
       point: {
         radius: 4,
         hitRadius: 10,
-        hoverRadius: 4,
-      },
+        hoverRadius: 4
+      }
     },
     legend: {
       display: false
@@ -74,7 +89,15 @@ export class DashboardComponent implements OnInit {
       label: 'Series A'
     }
   ];
-  public lineChart2Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChart2Labels: Array<any> = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July'
+  ];
   public lineChart2Options: any = {
     tooltips: {
       enabled: false,
@@ -82,25 +105,28 @@ export class DashboardComponent implements OnInit {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [{
-        gridLines: {
-          color: 'transparent',
-          zeroLineColor: 'transparent'
-        },
-        ticks: {
-          fontSize: 2,
-          fontColor: 'transparent',
+      xAxes: [
+        {
+          gridLines: {
+            color: 'transparent',
+            zeroLineColor: 'transparent'
+          },
+          ticks: {
+            fontSize: 2,
+            fontColor: 'transparent'
+          }
         }
-
-      }],
-      yAxes: [{
-        display: false,
-        ticks: {
+      ],
+      yAxes: [
+        {
           display: false,
-          min: 1 - 5,
-          max: 34 + 5,
+          ticks: {
+            display: false,
+            min: 1 - 5,
+            max: 34 + 5
+          }
         }
-      }],
+      ]
     },
     elements: {
       line: {
@@ -110,22 +136,22 @@ export class DashboardComponent implements OnInit {
       point: {
         radius: 4,
         hitRadius: 10,
-        hoverRadius: 4,
-      },
+        hoverRadius: 4
+      }
     },
     legend: {
       display: false
     }
   };
   public lineChart2Colours: Array<any> = [
-    { // grey
+    {
+      // grey
       backgroundColor: getStyle('--info'),
       borderColor: 'rgba(255,255,255,.55)'
     }
   ];
   public lineChart2Legend = false;
   public lineChart2Type = 'line';
-
 
   // lineChart3
   public lineChart3Data: Array<any> = [
@@ -134,7 +160,15 @@ export class DashboardComponent implements OnInit {
       label: 'Series A'
     }
   ];
-  public lineChart3Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChart3Labels: Array<any> = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July'
+  ];
   public lineChart3Options: any = {
     tooltips: {
       enabled: false,
@@ -142,12 +176,16 @@ export class DashboardComponent implements OnInit {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [{
-        display: false
-      }],
-      yAxes: [{
-        display: false
-      }]
+      xAxes: [
+        {
+          display: false
+        }
+      ],
+      yAxes: [
+        {
+          display: false
+        }
+      ]
     },
     elements: {
       line: {
@@ -156,8 +194,8 @@ export class DashboardComponent implements OnInit {
       point: {
         radius: 0,
         hitRadius: 10,
-        hoverRadius: 4,
-      },
+        hoverRadius: 4
+      }
     },
     legend: {
       display: false
@@ -166,12 +204,11 @@ export class DashboardComponent implements OnInit {
   public lineChart3Colours: Array<any> = [
     {
       backgroundColor: 'rgba(255,255,255,.2)',
-      borderColor: 'rgba(255,255,255,.55)',
+      borderColor: 'rgba(255,255,255,.55)'
     }
   ];
   public lineChart3Legend = false;
   public lineChart3Type = 'line';
-
 
   // barChart1
   public barChart1Data: Array<any> = [
@@ -180,7 +217,24 @@ export class DashboardComponent implements OnInit {
       label: 'Series A'
     }
   ];
-  public barChart1Labels: Array<any> = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16'];
+  public barChart1Labels: Array<any> = [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12',
+    '13',
+    '14',
+    '15',
+    '16'
+  ];
   public barChart1Options: any = {
     tooltips: {
       enabled: false,
@@ -188,13 +242,17 @@ export class DashboardComponent implements OnInit {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [{
-        display: false,
-        barPercentage: 0.6,
-      }],
-      yAxes: [{
-        display: false
-      }]
+      xAxes: [
+        {
+          display: false,
+          barPercentage: 0.6
+        }
+      ],
+      yAxes: [
+        {
+          display: false
+        }
+      ]
     },
     legend: {
       display: false
@@ -231,7 +289,36 @@ export class DashboardComponent implements OnInit {
     }
   ];
   /* tslint:disable:max-line-length */
-  public mainChartLabels: Array<any> = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Thursday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  public mainChartLabels: Array<any> = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+    'Monday',
+    'Thursday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday'
+  ];
   /* tslint:enable:max-line-length */
   public mainChartOptions: any = {
     tooltips: {
@@ -242,31 +329,38 @@ export class DashboardComponent implements OnInit {
       position: 'nearest',
       callbacks: {
         labelColor: function(tooltipItem, chart) {
-          return { backgroundColor: chart.data.datasets[tooltipItem.datasetIndex].borderColor };
+          return {
+            backgroundColor:
+              chart.data.datasets[tooltipItem.datasetIndex].borderColor
+          };
         }
       }
     },
     responsive: true,
     maintainAspectRatio: false,
     scales: {
-      xAxes: [{
-        gridLines: {
-          drawOnChartArea: false,
-        },
-        ticks: {
-          callback: function(value: any) {
-            return value.charAt(0);
+      xAxes: [
+        {
+          gridLines: {
+            drawOnChartArea: false
+          },
+          ticks: {
+            callback: function(value: any) {
+              return value.charAt(0);
+            }
           }
         }
-      }],
-      yAxes: [{
-        ticks: {
-          beginAtZero: true,
-          maxTicksLimit: 5,
-          stepSize: Math.ceil(250 / 5),
-          max: 250
+      ],
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+            maxTicksLimit: 5,
+            stepSize: Math.ceil(250 / 5),
+            max: 250
+          }
         }
-      }]
+      ]
     },
     elements: {
       line: {
@@ -276,7 +370,7 @@ export class DashboardComponent implements OnInit {
         radius: 0,
         hitRadius: 10,
         hoverRadius: 4,
-        hoverBorderWidth: 3,
+        hoverBorderWidth: 3
       }
     },
     legend: {
@@ -284,17 +378,20 @@ export class DashboardComponent implements OnInit {
     }
   };
   public mainChartColours: Array<any> = [
-    { // brandInfo
+    {
+      // brandInfo
       backgroundColor: hexToRgba(getStyle('--info'), 10),
       borderColor: getStyle('--info'),
       pointHoverBackgroundColor: '#fff'
     },
-    { // brandSuccess
+    {
+      // brandSuccess
       backgroundColor: 'transparent',
       borderColor: getStyle('--success'),
       pointHoverBackgroundColor: '#fff'
     },
-    { // brandDanger
+    {
+      // brandDanger
       backgroundColor: 'transparent',
       borderColor: getStyle('--danger'),
       pointHoverBackgroundColor: '#fff',
@@ -332,7 +429,15 @@ export class DashboardComponent implements OnInit {
     }
   ];
 
-  public brandBoxChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public brandBoxChartLabels: Array<any> = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July'
+  ];
   public brandBoxChartOptions: any = {
     tooltips: {
       enabled: false,
@@ -341,12 +446,16 @@ export class DashboardComponent implements OnInit {
     responsive: true,
     maintainAspectRatio: false,
     scales: {
-      xAxes: [{
-        display: false,
-      }],
-      yAxes: [{
-        display: false,
-      }]
+      xAxes: [
+        {
+          display: false
+        }
+      ],
+      yAxes: [
+        {
+          display: false
+        }
+      ]
     },
     elements: {
       line: {
@@ -356,7 +465,7 @@ export class DashboardComponent implements OnInit {
         radius: 0,
         hitRadius: 10,
         hoverRadius: 4,
-        hoverBorderWidth: 3,
+        hoverBorderWidth: 3
       }
     },
     legend: {
@@ -384,5 +493,18 @@ export class DashboardComponent implements OnInit {
       this.mainChartData2.push(this.random(80, 100));
       this.mainChartData3.push(65);
     }
+    this.getAllVendorsList();
+    this.getAllCandidatesList();
+  }
+
+  getAllVendorsList() {
+    this.vendorService.getAllVendors().subscribe((data: any) => {
+      this.vendorList = data;
+    });
+  }
+  getAllCandidatesList() {
+    this.vendorService.getAllCandidates().subscribe((data: any) => {
+      this.candidateList = data;
+    });
   }
 }

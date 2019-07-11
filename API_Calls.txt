@@ -16,3 +16,10 @@ http://106.51.32.211:9090/project/projectTypes
 
 
 http://106.51.32.211:9090/user/findAllUsers
+
+
+validateUser
+createUser
+
+findUserById
+deleteUser
