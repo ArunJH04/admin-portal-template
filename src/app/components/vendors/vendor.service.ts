@@ -4,7 +4,7 @@ import { environment } from '../../../environments/environment';
 export class VendorService {
   // Base URL
   baseVendor = environment.api.baseVendor; // "Vendor"
-  baseCandidate = environment.api.baseVendor; // "Candidate"
+  baseCandidate = environment.api.baseCandidate; // "Candidate"
 
   endPointUrl = environment.api.endPoints; // Common End Point URL
 
