@@ -18,8 +18,8 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.getProjectsList();
-    this.getProjectTypesList();
-    this.getProjectTypesStatus();
+    //this.getProjectTypesList();
+    //this.getProjectTypesStatus();
     this.getVendorsList();
   }
 
