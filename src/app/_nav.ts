@@ -27,13 +27,15 @@ export interface NavData {
   class?: string;
   label?: NavLabel;
   wrapper?: NavWrapper;
+  role?: number;
 }
 
 export const navItems: NavData[] = [
   {
     name: 'Dashboard',
     url: '/dashboard',
-    icon: 'icon-speedometer'
+    icon: 'icon-speedometer',
+    role: 1
     // badge: {
     //   variant: 'info',
     //   text: 'NEW'
@@ -43,11 +45,12 @@ export const navItems: NavData[] = [
     name: 'Projects',
     url: '/components/projects',
     icon: 'icon-paper-clip',
+    role: 1,
     children: [
       {
         name: 'Add Project',
         url: '/components/add-project',
-        icon: 'icon-pencil',
+        icon: 'icon-pencil'
       },
       {
         name: 'List Project',
@@ -60,6 +63,7 @@ export const navItems: NavData[] = [
     name: 'Talent',
     url: '/components/talents',
     icon: 'icon-bulb',
+    role: 2,
     children: [
       {
         name: 'Add Talent',
@@ -89,11 +93,13 @@ export const navItems: NavData[] = [
     name: 'Reports',
     url: '/components/reports',
     icon: 'icon-docs',
+    role: 2
   },
   {
     name: 'Master Data',
     url: '/components/master-data',
     icon: 'icon-briefcase',
+    role: 1,
     children: [
       {
         name: 'Vendors',
@@ -156,7 +162,7 @@ export const navItems: NavData[] = [
             url: '/components/add-lob',
             icon: 'icon-pencil'
           },
-          
+
           {
             name: 'List LOB',
             url: '/components/lobs',
@@ -188,8 +194,8 @@ export const navItems: NavData[] = [
   //   url: '/components/users',
   //   icon: 'icon-pencil'
   // },
-  
-  // , 
+
+  // ,
   // {
   //   title: true,
   //   name: 'Components'
