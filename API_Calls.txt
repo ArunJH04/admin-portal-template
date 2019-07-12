@@ -18,11 +18,11 @@ http://106.51.32.211:9090/project/projectTypes
 http://106.51.32.211:9090/user/findAllUsers
 
 
-validateUser
-createUser
+http://106.51.32.211:9090/user/validateUser
+http://106.51.32.211:9090/user/createUser
 
-findUserById
-deleteUser
+http://106.51.32.211:9090/user/findUserById
+http://106.51.32.211:9090/user/deleteUser
 
 
 admin login
