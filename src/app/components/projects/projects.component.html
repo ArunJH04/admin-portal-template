@@ -19,8 +19,9 @@
             <div class="col-lg-2">
               <input
                 type="text"
-                placeholder="quick search here.."
+                placeholder="Search Project"
                 name="search_text"
+                (keyup)='search($event.target.value)'
               />
             </div>
           </div>

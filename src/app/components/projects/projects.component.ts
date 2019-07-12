@@ -29,6 +29,16 @@ export class ProjectsComponent implements OnInit {
     });
   }
 
+  search(term: string) {
+    if(!term) {
+      this.projectList = this.projectList;
+    } else {
+      this.projectList = this.projectList.filter(x => 
+         x.name.trim().toLowerCase().includes(term.trim().toLowerCase())
+      );
+    }
+  }
+
   getVendorsList() {
     this.componentService.getAllVendors().subscribe((data: any) => {
       this.vendorList = data;

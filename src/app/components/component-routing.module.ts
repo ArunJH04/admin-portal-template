@@ -4,12 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { UsersComponent } from './users/users.component';
 import { AddProjectComponent } from './projects/add-project/add-project.component';
+import { ComponentsModule } from '../components/components.module';
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'components',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'components',
-    data: {
-      title: 'components'
-    },
     children: [
       {
         path: 'projects',
