@@ -24,7 +24,7 @@
                   type="text"
                   class="form-control"
                   id="title"
-                  placeholder="Enter project title"
+                  placeholder="enter project title"
                   [(ngModel)]="projectInfo.title"
                 />
               </div>
@@ -36,7 +36,7 @@
                   type="text"
                   class="form-control"
                   id="lob"
-                  placeholder="Enter line of business"
+                  placeholder="enter line of business"
                   [(ngModel)]="projectInfo.lob"
                 />
               </div>
@@ -48,7 +48,7 @@
                   type="text"
                   class="form-control"
                   id="street"
-                  placeholder="Enter business name"
+                  placeholder="enter business name"
                   [(ngModel)]="projectInfo.bu"
                 />
               </div>
@@ -66,9 +66,11 @@
                   [(ngModel)]="projectInfo.type"
                 >
                   <option value="0">Select Type</option>
-                  <option value="1">Type 1</option>
-                  <option value="2">Type 2</option>
-                  <option value="3">Type 3</option>
+                  <option
+                    value="{{ indval }}"
+                    *ngFor="let indval of projectTypeList"
+                    >{{ indval }}</option
+                  >
                 </select>
               </div>
             </div>
@@ -108,7 +110,7 @@
                     id="appendedPrependedInput"
                     size="16"
                     type="text"
-                    placeholder="Enter budget"
+                    placeholder="enter budget"
                     [(ngModel)]="projectInfo.budget"
                   />
                 </div>
@@ -121,7 +123,7 @@
                   type="text"
                   class="form-control"
                   id="location"
-                  placeholder="Enter Location"
+                  placeholder="enter Location"
                   [(ngModel)]="projectInfo.location"
                 />
               </div>

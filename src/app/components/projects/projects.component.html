@@ -21,7 +21,7 @@
                 type="text"
                 placeholder="Search Project"
                 name="search_text"
-                (keyup)='search($event.target.value)'
+                (keyup)="search($event.target.value)"
               />
             </div>
           </div>
@@ -100,7 +100,7 @@
                 <tr *ngFor="let indvalue of projectList; let i = index">
                   <td>{{ i + 1 }}</td>
                   <td>{{ indvalue.title }}</td>
-                  <td>{{ indvalue.vendors }}</td>
+                  <td>{{ indvalue.vendors['1'] || indvalue.vendors['2'] }}</td>
                   <td>{{ indvalue.lineOfBusiness }}</td>
                   <td>{{ indvalue.projectType }}</td>
                   <td>{{ indvalue.budget }}</td>

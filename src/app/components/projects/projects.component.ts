@@ -18,8 +18,6 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.getProjectsList();
-    //this.getProjectTypesList();
-    //this.getProjectTypesStatus();
     this.getVendorsList();
   }
 
@@ -30,11 +28,14 @@ export class ProjectsComponent implements OnInit {
   }
 
   search(term: string) {
-    if(!term) {
+    if (!term) {
       this.projectList = this.projectList;
     } else {
-      this.projectList = this.projectList.filter(x => 
-         x.name.trim().toLowerCase().includes(term.trim().toLowerCase())
+      this.projectList = this.projectList.filter(x =>
+        x.name
+          .trim()
+          .toLowerCase()
+          .includes(term.trim().toLowerCase())
       );
     }
   }
