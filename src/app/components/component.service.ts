@@ -17,7 +17,7 @@ export class ComponentService {
   }
   addProject(projectInfo) {
     return this.httpClient.post(
-      this.baseProject + this.endPointUrl.getAllProjects,
+      this.baseProject + this.endPointUrl.addProject,
       projectInfo
     );
   }

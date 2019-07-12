@@ -11,7 +11,6 @@ import { AddProjectComponent } from './add-project/add-project.component';
   imports: [
     CommonModule,
     FormsModule,
-    AddProjectComponent,
     ProjectsRoutingModule,
     ButtonsModule.forRoot()
   ]

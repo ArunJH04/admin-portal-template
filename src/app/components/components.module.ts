@@ -14,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     CommonModule,
     ComponentsRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AddProjectComponent
   ],
   providers: [ComponentService]
 })
