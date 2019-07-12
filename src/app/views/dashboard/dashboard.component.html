@@ -307,8 +307,7 @@
                 <th>URL</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>City</th>
-                <th>State</th>
+                <th>Address</th>
               </tr>
             </thead>
             <tbody>
@@ -337,10 +336,7 @@
                   {{ eachVal.phone1 }}
                 </td>
                 <td>
-                  {{ eachVal.city }}
-                </td>
-                <td>
-                  {{ eachVal.state }}
+                  {{ eachVal.address }}
                 </td>
               </tr>
             </tbody>
@@ -363,8 +359,9 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Phone</th>
-                <th>City</th>
-                <th>State</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Vendor</th>
               </tr>
             </thead>
             <tbody>
@@ -390,10 +387,13 @@
                   {{ indVal.cellNumber }}
                 </td>
                 <td>
-                  {{ indVal.city }}
+                  {{ indVal.primaryEmail }}
                 </td>
                 <td>
-                  {{ indVal.state }}
+                  {{ indVal.address }}
+                </td>
+                <td>
+                  {{ indVal.vendor['1'] }}
                 </td>
               </tr>
             </tbody>

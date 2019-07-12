@@ -15,6 +15,11 @@ export class ComponentService {
       this.baseProject + this.endPointUrl.getAllProjects
     );
   }
+  getAllProjectTypes() {
+    return this.httpClient.get(
+      this.baseProject + this.endPointUrl.getProjectTypes
+    );
+  }
   addProject(projectInfo) {
     return this.httpClient.post(
       this.baseProject + this.endPointUrl.addProject,
