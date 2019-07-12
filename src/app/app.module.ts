@@ -42,7 +42,7 @@ import { ComponentsModule } from './components/components.module';
 import { FormsModule } from '@angular/forms';
 import { LoginService } from './views/login/login.service';
 import { AlertsModule } from 'angular-alert-module';
-
+import { AddProjectComponent } from '../app/components/projects/add-project/add-project.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -67,7 +67,8 @@ import { AlertsModule } from 'angular-alert-module';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddProjectComponent
   ],
   providers: [
     {

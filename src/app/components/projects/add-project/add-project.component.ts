@@ -1,20 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComponentService } from '../../component.service';
-
+import { Projects } from '../../model/projects';
 @Component({
   selector: 'app-add-project',
   templateUrl: './add-project.component.html',
   styleUrls: ['./add-project.component.scss']
 })
 export class AddProjectComponent implements OnInit {
-  projectInfo = {};
+  projectInfo = <Projects>{};
   vendorList = [];
 
-  constructor(
-    private Router: Router,
-    private componentService: ComponentService
-  ) {}
+  constructor(private Router: Router, private componentService: ComponentService) {}
 
   ngOnInit() {
     this.getVendorsList();
@@ -27,10 +24,8 @@ export class AddProjectComponent implements OnInit {
   }
   addProjectDetails() {
     console.log(this.projectInfo);
-    this.componentService
-      .addProject(this.projectInfo)
-      .subscribe((data: any) => {
-        this.Router.navigate(['components/projects']);
-      });
+    this.componentService.addProject(this.projectInfo).subscribe((data: any) => {
+      this.Router.navigate(['components/projects']);
+    });
   }
 }
