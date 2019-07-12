@@ -39,12 +39,17 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { ComponentsModule } from './components/components.module';
+import { FormsModule } from '@angular/forms';
+import { LoginService } from './views/login/login.service';
+import { AlertsModule } from 'angular-alert-module';
 
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     ComponentsModule,
     BrowserAnimationsModule,
+    AlertsModule.forRoot(),
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
@@ -69,7 +74,8 @@ import { ComponentsModule } from './components/components.module';
       provide: LocationStrategy,
       useClass: HashLocationStrategy
     },
-    HttpClientModule
+    HttpClientModule,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

@@ -23,3 +23,14 @@ createUser
 
 findUserById
 deleteUser
+
+
+admin login
+-----------
+user name - naidu@diageo.com
+pass - 123456
+
+vendor login
+-------------
+user name - sivakumar.thota@diageo.com
+pass - 12345

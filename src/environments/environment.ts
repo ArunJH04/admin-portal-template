@@ -9,6 +9,8 @@ export const environment = {
     /* --------------All Base URLs----------------------*/
     // Project,
     baseProject: 'http://106.51.32.211:9090/project/',
+    // User,
+    baseUser: 'http://106.51.32.211:9090/user/',
     // Vendor,
     baseVendor: 'http://106.51.32.211:9090/vendor/',
     // Candidate,
@@ -26,7 +28,11 @@ export const environment = {
       getAllVendors: 'findAllVendors', // Get All Vendors
 
       // Candidates,
-      getAllCandidates: 'findAllCandidates' // Get All Candidates
+      getAllCandidates: 'findAllCandidates', // Get All Candidates
+
+      // User
+
+      validateUser: 'validateUser'
     }
   }
 };

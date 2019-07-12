@@ -6,16 +6,11 @@ import { UsersComponent } from './users/users.component';
 import { AddProjectComponent } from './projects/add-project/add-project.component';
 const routes: Routes = [
   {
-    path: '',
+    path: 'components',
     data: {
       title: 'components'
     },
     children: [
-      {
-        path: '',
-        redirectTo: 'projects',
-        pathMatch: 'full'
-      },
       {
         path: 'projects',
         component: ProjectsComponent,
